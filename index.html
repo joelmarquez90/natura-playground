@@ -1,12 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>natura-playground</title>
+    <title>Playground IA — Natura Cosméticos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              natura: { orange: '#E85D2C', green: '#2D5F3B', cream: '#FFF8F3', gold: '#C4942A' }
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body style="background:#FFF8F3">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
