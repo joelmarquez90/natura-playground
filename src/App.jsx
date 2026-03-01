@@ -12,8 +12,8 @@ const CAMPAIGNS = [
   { campana: "Día de la Madre", plataforma: "Meta Ads", inversion: 620000, impresiones: 1800000, clicks: 32400, conversiones: 1134, cpa: 547 },
   { campana: "Ekos Lanzamiento", plataforma: "TikTok", inversion: 420000, impresiones: 3200000, clicks: 96000, conversiones: 2880, cpa: 146 },
   { campana: "Ekos Lanzamiento", plataforma: "Instagram", inversion: 380000, impresiones: 1600000, clicks: 40000, conversiones: 1400, cpa: 271 },
-  { campana: "Campaña UNA", plataforma: "Google Ads", inversion: 540000, impresiones: 980000, clicks: 29400, conversiones: 882, cpa: 612 },
-  { campana: "Campaña UNA", plataforma: "YouTube", inversion: 310000, impresiones: 1500000, clicks: 22500, conversiones: 450, cpa: 689 },
+  { campana: "Aroa UNA", plataforma: "Google Ads", inversion: 540000, impresiones: 980000, clicks: 29400, conversiones: 882, cpa: 612 },
+  { campana: "Aroa UNA", plataforma: "YouTube", inversion: 310000, impresiones: 1500000, clicks: 22500, conversiones: 450, cpa: 689 },
   { campana: "Consultoras Q1", plataforma: "Meta Ads", inversion: 290000, impresiones: 2100000, clicks: 63000, conversiones: 3150, cpa: 92 },
   { campana: "Consultoras Q1", plataforma: "Instagram", inversion: 260000, impresiones: 1400000, clicks: 42000, conversiones: 2520, cpa: 103 },
   { campana: "App Push", plataforma: "Google Ads", inversion: 180000, impresiones: 450000, clicks: 13500, conversiones: 675, cpa: 267 },
@@ -151,7 +151,7 @@ function Module1() {
     { key: "cpa", label: "CPA", format: (v) => <span style={{ color: v < 200 ? "#2D5F3B" : v < 400 ? "#C4942A" : "#E85D2C", fontWeight: 700 }}>${v}</span> },
   ];
   const prompts = [
-    "Analizá esta tabla de campañas de tu marca. ¿Cuál tiene el mejor CPA? ¿Dónde debería reasignar presupuesto el próximo trimestre?",
+    "Analizá esta tabla de campañas de la marca. ¿Cuál tiene el mejor CPA? ¿Dónde debería reasignar presupuesto el próximo trimestre?",
     "Haceme un resumen ejecutivo de 3 párrafos para presentarle a mi directora de marketing, destacando los insights más importantes.",
     "Compará el rendimiento por plataforma (Instagram vs Meta Ads vs TikTok vs Google Ads). ¿En cuál conviene duplicar inversión?",
   ];
@@ -190,12 +190,12 @@ function Module1() {
 
 // ─── Module 2 ─────────────────────────────────────────────────────────────────
 function Module2() {
-  const brief = `Marca: Tu marca
+  const brief = `Marca: Aroa Cosméticos Argentina
 Objetivo: Engagement + awareness de línea sustentable
 Mes: Abril 2026
 Plataforma: Instagram (Feed + Stories + Reels)
 Tono: Cálido, empoderado, eco-consciente
-Línea destacada: la línea premium (ingredientes naturales, packaging sustentable)
+Línea destacada: Aroa Botanics (ingredientes naturales, packaging reciclable)
 
 Fechas clave:
   - 7/4: Día Mundial de la Salud
@@ -206,7 +206,7 @@ Frecuencia: 5 posts/semana (3 feed, 1 reel, 1 story interactiva)
 KPIs target: ER >3.5%, alcance >150K/post, saves >2%`;
   const prompts = [
     "Con este brief, generame un calendario completo de abril con copy para cada post, formato (feed/reel/story), hashtags y horario sugerido de publicación.",
-    "Escribime 5 copies para Reels de la línea premium que hablen de sustentabilidad sin sonar corporativo. Tono cercano, voseo, que genere saves.",
+    "Escribime 5 copies para Reels de Aroa Botanics que hablen de sustentabilidad sin sonar corporativo. Tono cercano, voseo, que genere saves.",
     "Adaptame este calendario para TikTok manteniendo el mismo mensaje pero ajustando el tono y el formato al algoritmo de TikTok.",
   ];
   return (
@@ -285,7 +285,7 @@ Top 3 piezas:
 
 // ─── Module 4 ─────────────────────────────────────────────────────────────────
 function Module4() {
-  const briefData = `Producto: nuevo producto — línea de body splash
+  const briefData = `Producto: Aroa Bloom — nueva línea de body splash
 Objetivo: Lanzamiento Q2 2026, target 15.000 unidades primer mes
 Target: Mujeres 25–40, urbanas, NSE BC1, valoran autocuidado diario
 Insight: "Los pequeños rituales de cuidado personal son mi momento de reconexión conmigo misma"
@@ -301,7 +301,7 @@ Entregables: KV principal, 3 adaptaciones IG, 2 scripts Reel, 1 guión TikTok
 Deadline: 15 abril 2026`;
   const prompts = [
     "Con esta información, armame un brief creativo completo y profesional para enviarle a la agencia. Seguí el formato estándar del sector.",
-    "Generame 5 conceptos creativos para esta campaña de nuevo producto body splash. Cada concepto con nombre, tagline y descripción de la idea visual.",
+    "Generame 5 conceptos creativos para esta campaña de Aroa Bloom body splash. Cada concepto con nombre, tagline y descripción de la idea visual.",
     "Distribuí el presupuesto de $3.500.000 ARS en un media plan semanal por plataforma y formato. Justificá cada decisión.",
   ];
   return (
@@ -309,7 +309,7 @@ Deadline: 15 abril 2026`;
       <p className="text-sm mb-4 leading-relaxed" style={{ color: "#666" }}>Necesitás crear un brief para tu agencia creativa. Claude lo estructura de forma profesional en segundos.</p>
       <div className="rounded-xl p-4 mb-4" style={{ background: "#FFF8F3", border: "1px solid #E8E0D8" }}>
         <div className="flex justify-between items-center mb-2">
-          <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "#E85D2C" }}>Brief de campaña — el nuevo producto</span>
+          <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "#E85D2C" }}>Brief de campaña — Aroa Bloom</span>
           <CopyButton text={briefData} />
         </div>
         <pre className="text-xs leading-relaxed whitespace-pre-wrap" style={{ color: "#2C2C2C", fontFamily: "monospace" }}>{briefData}</pre>
@@ -418,7 +418,7 @@ Mes 3: Expansión a equipo completo
 
 function Module6() {
   const [proposal, setProposal] = useState(INITIAL_PROPOSAL);
-  const prompt = "Tomá este template de business case y personalizalo para tu empresa. Hacelo más persuasivo, agregá datos reales del equipo y una sección de riesgos y mitigación.";
+  const prompt = "Tomá este template de business case y personalizalo con los datos reales de tu empresa. Hacelo más persuasivo, agregá datos reales del equipo y una sección de riesgos y mitigación.";
   return (
     <div>
       <p className="text-sm mb-4 leading-relaxed" style={{ color: "#666" }}>Este template está listo para personalizar. Editalo directamente acá o copiáselo a Claude para que lo mejore.</p>
@@ -491,7 +491,7 @@ export default function App() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-base font-bold text-white tracking-tight">Claude para Marketing</h1>
-              <p className="text-xs mt-0.5" style={{ color: "#E85D2C" }}>Playground Interactivo</p>
+              <p className="text-xs mt-0.5" style={{ color: "#E85D2C" }}>Playground Interactivo · Marketing</p>
             </div>
             <button onClick={() => setSidebarOpen(false)} className="md:hidden text-white p-1"><X size={18} /></button>
           </div>
