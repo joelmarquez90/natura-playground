@@ -367,7 +367,7 @@ function Module5() {
 const INITIAL_PROPOSAL = `PROPUESTA: Implementación de Claude AI en Comunicación y Marketing
 
 PARA: [Nombre Directora de Marketing]
-DE: Florencia [Apellido], Coordinadora de Medios
+DE: [Tu nombre], Coordinadora de Medios
 FECHA: Marzo 2026
 
 1. RESUMEN EJECUTIVO
